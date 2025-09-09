@@ -1,5 +1,6 @@
 # HellPott
 
+Von Luca, Laurin und Yassin
 ## Was ist HellPot?
 
 HellPot ist ein *endloser Honeypot* – entwickelt, um HTTP-Bots (zum Beispiel solche, die `robots.txt` ignorieren) in eine Art digitalen Albtraum zu locken. Anstatt eine normale Webseite auszuliefern, erzeugt HellPot einen nahezu echten, endlosen Datenstrom, der die Bots dazu verleitet, immer weiter zu konsumieren, bis ihre "Seele… aufhört zu existieren".
@@ -138,3 +139,6 @@ HellPot schreibt strukturierte Logs (JSON).
 ```bash
 journalctl -u hellpot -f
 ```
+
+### Bild
+![](hellpot.png)
